@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["map"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [39.6429339,2.7791586,  'CEIP Melcior Rossell&#243; i Simonet'],
+          [38.7108359,1.460855, 'CEIP Sant Ferran de ses Roques'],
+          [39.695726,3.345499,  'CEPA Art&#224;'],
+	  [39.6850828,2.8390324, 'IES Binissalem'],
+	  [39.6905619,2.8466745, 'CEIP Robines'],
+	  [39.57716,2.67535, 'IES Sureda i Blanes'],
+	  [39.5911107,2.7054624, 'Cifp Son Llebre'],
+   	  [39.546628,2.6167427, 'Cifp Escola de Formaci&oacute; N&#224;uticopesquera de Palma'],
+	  [39.587864,2.651631, 'IES Madina Mayurqa'],
+	  [39.6988296,3.0029434, 'CEIP Duran Estrany'],
+	  [39.6477572,2.7726466, 'IES Santa Maria'],
+	  [39.6052921,2.6545056, 'IES Son Pacs'],
+	  [39.4855656,2.8920686, 'CEIP Sa Marina'],
+ 	  [39.4957907,2.8891207, 'IES Llucmajor'],
+	  [39.705601,3.0990888, 'IES Santa Margalida'],
+	  [39.5651431,3.366525, 'CEIP Talaiot'],
+          [39.5638231,3.199754, 'IES Manacor'],
+	  [39.5864046,2.6546357, 'IES Joan Maria Thomas'],
+ 	  [39.721155, 2.865007, 'CEIP Es Puig de Lloseta'],
+	  [39.4246702,3.2557955, 'CEIP S Algar'],
+          [39.7259709,2.9114333, 'IES Pau Casesnoves'],
+          [39.6385214,3.0005712, 'IES Sineu'],
+	  [39.5752108,3.1996571, 'CEP Manacor'],
+	  [39.6183993,2.9771513, 'CEIP Antònia Alzina'],
+	  [39.5937531,3.0314703, 'CEIP Son Juny'],
+	  [39.580681,2.6699594, 'CEIP Gabriel Vallseca'],
+	  [39.5766027,2.6440422, 'IES Ramon Llull'],
+     	  [39.5764202,2.7109463, 'CEIP Son Ferriol'],
+	  [39.554561,2.7756005, 'CEIP Sant Jordi'],
+	  [39.571044,2.4155691, 'CEIP Es Vinyet'],
+	  [39.5395955,2.5830809, 'IES Bendinat'],
+	  [39.5444107,3.3354205, 'CEIP Ses Comes'],
+	  [39.6957301,3.3433103, 'IES Llorenç Garcias i Font'],
+	  [39.734224,3.0545969, 'CEIP Guillem Ballester i Cerd&#243;'],
+	  [39.6627344,2.5805533, 'CEIP Gabriel Comas i Ribas'],
+	  [39.6779796,2.814376, 'CEIP Bartomeu Ordines'],
+	  [39.658662,2.589203, 'IES Josep Font i Trias'],
+	  [39.6644316,2.671019, 'CEIP Gaspar Sabater'],
+	  [39.4327807,3.0138374, 'CEIP Joan Veny i Clar'],
+	  [39.5967004,2.6844621, 'IES Son Rullan'],
+	  [39.6147589,3.3659689, 'IES Puig de sa Font'],
+	  [39.6253741,3.352486, 'CEIP Jaume Fornaris i Taltavull'],
+    	  [39.4980664,2.5012932, 'IES Son Ferrer'],
+	  [39.5842939,2.6328094, 'IES Emili Darder'],
+	  [39.8494325,3.1265328, 'CEIP Hort des Fassers'],
+	  [39.5826612,2.6564132, 'CC Col.legi Pius XII'],
+	  [39.5745781,2.6562744, 'IES Arxiduc Lluis Salvador'],
+	  [39.7045927,3.1002157, 'CEIP Elionor Bosch'],
+	  [39.586098,2.633762,'CEIP Marian Aguiló'],
+          [39.8743595,4.2590707, 'IES Cap de Llevant'],
+	  [38.7039063,1.4247459, 'IES Marc Ferrer'],
+	  [39.7013715,3.4322113, 'CEIP S Alzinar'],
+	  [39.6164969,2.691298, 'CEIP Costa i Llobera'],
+	  [39.5769511,2.6469476, 'IES Joan Alcover'],
+	  [39.6011121,2.6871463, 'CC Es Liceu'],
+	  [39.5903405,2.6080916, 'Col.legi CIDE'],
+	  [39.6382138,2.6377618, 'Universitat de les Illes Balears']
+        ]);
+
+        var options = {
+	  useMapTypeControl: true,
+	  showTip: true,
+          icons: {
+            default: {
+              normal: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Push-Pin-1-Chartreuse-icon.png',
+              selected: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Push-Pin-1-Right-Chartreuse-icon.png'
+            }
+          }
+        };
+
+        var map = new google.visualization.Map(document.getElementById('map_markers_div'));
+        map.draw(data, options);
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map_markers_div" style="width: 800px; height: 600px"></div>
+  </body>
+</html>
